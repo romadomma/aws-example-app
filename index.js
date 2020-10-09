@@ -1,6 +1,7 @@
 const app = require('express')();
 const bodyParser = require('body-parser');
 let buff = [];
+const port = 8080;
 
 app.use(bodyParser.json({ type: 'application/json' }));
 
@@ -25,6 +26,6 @@ app.get('/', (req, res) => {
 
 setInterval(() => { buff = []; }, 60000);
 
-app.listen(8080, () => {
-    console.log('Server started on 80 port 🤪');
+app.listen(port, () => {
+    console.log(`Server started on ${port} port 🤪`);
 });
