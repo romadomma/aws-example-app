@@ -25,6 +25,6 @@ app.get('/', (req, res) => {
 
 setInterval(() => { buff = []; }, 60000);
 
-app.listen(80);
-
-console.log('Server started on 80 port 🤪');
+app.listen(8080, () => {
+    console.log('Server started on 80 port 🤪');
+});
